@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener(
 let getAnalysis = () => {
   let pageContent = $('body').text();
 
-  $.post("http://127.0.0.1:5000/", {'data': pageContent}, function(data, status) {
+  $.post("http://flask-env.mp3f8x6phi.us-west-2.elasticbeanstalk.com/", {'data': pageContent}, function(data, status) {
     console.log(`Status: ${status}`);
     console.log(data);
     createModal(data, status);
