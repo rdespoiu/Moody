@@ -3,8 +3,8 @@ from flask_restful import Resource, Api
 from sentiment_analyzer import getSentiment
 
 # Instantiate app and api
-app = Flask(__name__)
-api = Api(app)
+application = Flask(__name__)
+api = Api(application)
 
 # Create endpoint for sentiment analysis
 class SentimentAnalysis(Resource):
@@ -17,4 +17,4 @@ api.add_resource(SentimentAnalysis, '/')
 
 # Main method to run the API
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(debug=True)
